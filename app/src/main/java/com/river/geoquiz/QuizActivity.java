@@ -1,4 +1,4 @@
-package com.newheight.geoquiz;
+package com.river.geoquiz;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

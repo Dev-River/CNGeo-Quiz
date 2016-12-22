@@ -1,4 +1,4 @@
-package com.newheight.geoquiz;
+package com.river.geoquiz;
 
 /**
  * Created by huanghe3 on 2016/12/21.
