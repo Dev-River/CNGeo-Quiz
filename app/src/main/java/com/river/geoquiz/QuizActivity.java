@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.newheight.geoquiz.R;
+
 public class QuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
