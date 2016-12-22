@@ -1,4 +1,4 @@
-package com.newheight.geoquiz;
+package com.river.geoquiz;
 
 import org.junit.Test;
 
