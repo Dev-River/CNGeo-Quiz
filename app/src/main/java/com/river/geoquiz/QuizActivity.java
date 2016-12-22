@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.newheight.geoquiz.R;
+import com.river.geoquiz.R;
+
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -77,12 +78,7 @@ public class QuizActivity extends AppCompatActivity {
         int messageResId = 0;
         if(userPressed == mQuestionBank[mCurrentIndex].isTrueQuestion()){
             messageResId = R.string.correct_toast;
-            Toast.makeText(QuizActivity.this, messageResId, Toast.LENGTH_SHORT).show();
         }else{}
+        Toast.makeText(QuizActivity.this, messageResId, Toast.LENGTH_SHORT).show();
     }
-
-    public static void main(String[] args){
-        System.out.println(R.string.correct_toast);
-    }
-
 }
