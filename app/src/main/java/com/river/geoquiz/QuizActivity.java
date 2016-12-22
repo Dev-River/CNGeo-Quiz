@@ -49,13 +49,13 @@ public class QuizActivity extends AppCompatActivity {
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(QuizActivity.this, R.string.correct_toast, Toast.LENGTH_SHORT).show();
+                checkAnswer(true);
             }
         });
         mFalseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(QuizActivity.this, R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
+                checkAnswer(false);
             }
         });
         mNextButton.setOnClickListener(new View.OnClickListener(){
@@ -78,7 +78,10 @@ public class QuizActivity extends AppCompatActivity {
         int messageResId = 0;
         if(userPressed == mQuestionBank[mCurrentIndex].isTrueQuestion()){
             messageResId = R.string.correct_toast;
-        }else{}
+        }else{
+            messageResId = R.string.incorrect_toast;
+        }
         Toast.makeText(QuizActivity.this, messageResId, Toast.LENGTH_SHORT).show();
     }
+
 }
