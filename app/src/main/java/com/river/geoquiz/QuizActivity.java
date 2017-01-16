@@ -16,6 +16,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button mTrueButton;
     private Button mFalseButton;
     private Button mNextButton;
+    private Button mPrevButton;
     private TextView mQuestionTextView;
 
     //问题数组索引变量
@@ -44,6 +45,7 @@ public class QuizActivity extends AppCompatActivity {
         mTrueButton = (Button) findViewById(R.id.ture_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
         mNextButton = (Button) findViewById(R.id.next_button);
+        mPrevButton = (Button) findViewById(R.id.prev_button);
 
         //设置监听
         mTrueButton.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +66,16 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mCurrentIndex = (mCurrentIndex + 1) %  mQuestionBank.length;
                 updateQuestion();
+            }
+        });
+        mPrevButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                if (mCurrentIndex != 0) {
+                    mCurrentIndex = (mCurrentIndex) % mQuestionBank.length - 1;
+                    updateQuestion();
+                }
             }
         });
 
